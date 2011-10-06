@@ -3,8 +3,8 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(here, 'README.txt')).read()
-CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
+README = open(os.path.join(here, 'README.rst')).read()
+CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 requires = [
     'pyramid',
@@ -13,6 +13,11 @@ requires = [
     'repoze.retry',
     'ZODB3',
     'WebError',
+    'slugify',
+    'repoze.folder',
+    'pytz',
+    'colander',
+    'deform',
     ]
 
 setup(name='Progress',
@@ -25,8 +30,8 @@ setup(name='Progress',
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         ],
-      author='',
-      author_email='',
+      author='Robin Harms Oredsson / Betahaus',
+      author_email='robin@betahaus.net',
       url='',
       keywords='web pylons pyramid',
       packages=find_packages(),
