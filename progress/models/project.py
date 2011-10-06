@@ -1,8 +1,8 @@
 from zope.interface import implements
+from betahaus.pyracont import BaseFolder
+from betahaus.pyracont.decorators import content_factory
+from betahaus.pyracont.factories import createContent
 
-from progress.models.base import BaseFolder
-from progress.models.factories import content_factory
-from progress.models.factories import createContent
 from progress import ProgressMF as _
 
 

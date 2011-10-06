@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
-requires = [
+requires = (
     'pyramid',
     'repoze.zodbconn',
     'repoze.tm2>=1.0b1', # default_commit_veto
@@ -18,7 +18,8 @@ requires = [
     'pytz',
     'colander',
     'deform',
-    ]
+    'betahaus.pyracont',
+    )
 
 setup(name='Progress',
       version='0.0',

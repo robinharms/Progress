@@ -1,6 +1,5 @@
 import colander
-
-from progress.models.factories import schema_factory
+from betahaus.pyracont.decorators import schema_factory
 
 
 @schema_factory('site_root')

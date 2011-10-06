@@ -1,4 +1,5 @@
-from progress.models.base import BaseFolder
+from betahaus.pyracont import BaseFolder
+
 from progress import ProgressMF as _
 
 

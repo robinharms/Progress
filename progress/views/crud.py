@@ -4,11 +4,11 @@ from deform.exception import ValidationFailure
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound
 from pyramid.url import resource_url
+from betahaus.pyracont.interfaces import IBaseFolder
+from betahaus.pyracont.factories import createSchema
+from betahaus.pyracont.factories import createContent
 
 from progress.views.base import BaseView
-from progress.models.interfaces import IBaseFolder
-from progress.models.factories import createSchema
-from progress.models.factories import createContent
 
 
 BASE_EDIT_TPL = "templates/edit.pt"

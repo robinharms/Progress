@@ -1,4 +1,4 @@
-from progress.models.factories import createContent
+from betahaus.pyracont.factories import createContent
 
 
 def appmaker(zodb_root):

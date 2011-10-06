@@ -1,5 +1,5 @@
-from progress.models.base import BaseFolder
-from progress.models.factories import content_factory
+from betahaus.pyracont import BaseFolder
+from betahaus.pyracont.decorators import content_factory
 
 
 @content_factory('Users')

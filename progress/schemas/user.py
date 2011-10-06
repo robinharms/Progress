@@ -1,7 +1,7 @@
 import colander
 import deform
+from betahaus.pyracont.decorators import schema_factory
 
-from progress.models.factories import schema_factory
 from progress import ProgressMF as _
 
 

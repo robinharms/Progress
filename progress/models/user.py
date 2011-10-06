@@ -2,9 +2,8 @@ from hashlib import sha1
 
 from zope.interface import implements
 from repoze.folder import unicodify
-
-from progress.models.base import BaseFolder
-from progress.models.factories import content_factory
+from betahaus.pyracont import BaseFolder
+from betahaus.pyracont.decorators import content_factory
 
 
 def get_sha_password(password):
