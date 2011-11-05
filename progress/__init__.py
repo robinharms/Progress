@@ -44,6 +44,7 @@ def main(global_config, **settings):
 
     config.hook_zca()
     config.scan('progress')
+    config.scan('betahaus.pyracont.fields.versioning')
     return config.make_wsgi_app()
 
 

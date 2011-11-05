@@ -1,5 +1,7 @@
 from betahaus.pyracont.factories import createContent
 
+from progress import ProgressMF as _
+
 
 def appmaker(zodb_root):
     if not 'app_root' in zodb_root:
@@ -22,6 +24,6 @@ def bootstrap_root():
     #root.add_groups('admin', [security.ROLE_ADMIN])
     
     #Create example project
-    root['example-project'] = createContent('Project')
+    root['example-project'] = createContent('Project', title=_(u"Example project"))
 
     return root

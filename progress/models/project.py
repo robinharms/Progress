@@ -16,5 +16,5 @@ class Project(BaseFolder):
     #add_permission = security.ADD_USER
 
     def __init__(self, data=None, **kwargs):
-        supet(Project, self).__init__(data=data, **kwargs)
+        super(Project, self).__init__(data=data, **kwargs)
         self['tasks'] = createContent('Tasks')

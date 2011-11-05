@@ -1,0 +1,11 @@
+<tal:main xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="Progress">
+    <tal:actions condition="actions">
+        <ul>
+        	<tal:actionblock repeat="action actions">
+	            <li class="action-${action['id']}">
+	            	<a href="${action['url']}">${action['title']}</a>
+	            </li>
+        	</tal:actionblock>
+        </ul>
+    </tal:actions>
+</tal:main>

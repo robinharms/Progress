@@ -6,8 +6,20 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="Progress">
 <body>
+<div metal:fill-slot="pathbar" tal:content="structure api.render_pathbar()"></div>
+<div metal:fill-slot="context_menu" tal:content="structure api.render_context_menu()"></div>
 <div metal:fill-slot="content">
     <h1>${context.title}</h1>
+    
+    <tal:contents define="contents context.values()">
+        <ul tal:condition="contents">
+            <li tal:repeat="obj contents">
+                <a href="${resource_url(obj, request)}">${obj.title}</a>
+            </li>
+        </ul>
+        
+    </tal:contents>
+    
 </div>
 </body>
 </html>

@@ -35,6 +35,9 @@
     
 </head>
 <body>
+    <metal:pathbar define-slot="pathbar"></metal:pathbar>
+
+    <metal:context_menu define-slot="context_menu"></metal:context_menu>
     <metal:content define-slot="content"></metal:content>
 </body>
 </html>

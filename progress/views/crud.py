@@ -78,5 +78,4 @@ class CRUDView(BaseView):
 
     @view_config(context=IBaseFolder, renderer=BASE_VIEW_TPL)
     def view(self):
-        
         return self.response

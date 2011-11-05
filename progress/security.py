@@ -6,6 +6,8 @@ def groupfinder(name, request):
     """ Get groups for the current user.
         This is also a callback for the Authorization policy.
     """
+    #FIXME: Implement
+    return ()
     return request.context.get_groups(name)
 
 #Authentication policies

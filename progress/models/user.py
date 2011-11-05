@@ -34,14 +34,13 @@ class User(BaseFolder):
         del self._field_storage['userid']
         return userid
     
-    def set_password(self, value):
+    def set_password(self, value, key=None):
         """ Encrypt a plaintext password. """
         if not isinstance(value, unicode):
             value = unicodify(value)
         if len(value) < 5:
             raise ValueError("Password must be longer than 4 chars")
-        value = get_sha_password(value)
-        self.set_field_value('password', value)
+        self._field_storage['password'] = get_sha_password(value)
 
     @property
     def title(self):

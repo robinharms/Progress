@@ -1,0 +1,8 @@
+<tal:main xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="Progress">
+<div id="path-bar">
+    <tal:iterate repeat="obj path">
+        &raquo;
+        <a href="${resource_url(obj, request)}" tal:content="obj.title">Title</a>
+    </tal:iterate>
+</div>
+</tal:main>
