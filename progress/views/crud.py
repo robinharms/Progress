@@ -25,7 +25,7 @@ class CRUDView(BaseView):
 
         type = self.request.GET['type']
         obj = createContent(type)
-        schema = createSchema(obj.schemas['add'], self.context, self.request)
+        schema = createSchema(obj.schemas['add']).bind(context = self.context, request = self.request)
         form = Form(schema, buttons=('save', 'cancel',))
         self.register_form_resources(form)
 
@@ -53,7 +53,7 @@ class CRUDView(BaseView):
             url = resource_url(self.context, self.request)
             return HTTPFound(location=url)
 
-        schema = createSchema(self.context.schemas['edit'], self.context, self.request)
+        schema = createSchema(self.context.schemas['edit']).bind(context = self.context, request = self.request)
         form = Form(schema, buttons=('save', 'cancel',))
         self.register_form_resources(form)
 

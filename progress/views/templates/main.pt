@@ -29,10 +29,7 @@
     <metal:head define-slot="head"></metal:head>
     
 </head>
-<body>
-    <metal:pathbar define-slot="pathbar"></metal:pathbar>
+<body metal:define-slot="main">
 
-    <metal:context_menu define-slot="context_menu"></metal:context_menu>
-    <metal:content define-slot="content"></metal:content>
 </body>
 </html>

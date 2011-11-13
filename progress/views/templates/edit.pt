@@ -6,7 +6,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="Progress">
 <body>
-<div metal:fill-slot="content">
+<div metal:fill-slot="main">
     <tal:form replace="structure form"></tal:form>
 </div>
 </body>

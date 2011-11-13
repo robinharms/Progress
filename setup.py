@@ -8,6 +8,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 requires = (
     'pyramid',
+    'pyramid_debugtoolbar',
     'repoze.zodbconn',
     'repoze.tm2>=1.0b1', # default_commit_veto
     'repoze.retry',

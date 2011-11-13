@@ -1,13 +1,16 @@
 from betahaus.pyracont import BaseFolder
 from BTrees.LOBTree import LOBTree
 from betahaus.pyracont.decorators import content_factory
+from zope.interface import implements
 
 from progress import ProgressMF as _
+from progress.models.interfaces import ITasks
 
 
 @content_factory('Tasks')
 class Tasks(BaseFolder):
     """ Container for tasks. """
+    implements(ITasks)
     allowed_contexts = () #Not manually addable
     content_type = 'Tasks'
     display_name = _(u"Tasks")

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="Progress">
+<body metal:use-macro="view_content_tpl_macro">
+<div metal:fill-slot="content">
+
+<tal:contents define="contents context['tasks'].values()">
+    <ul tal:condition="contents">
+        <li tal:repeat="obj contents">
+            <a href="${resource_url(obj, request)}">${obj.title}</a>
+        </li>
+    </ul>
+</tal:contents>
+
+<a href="./tasks/add?type=Task">Add task</a>
+
+</div>
+</body>
+</html>

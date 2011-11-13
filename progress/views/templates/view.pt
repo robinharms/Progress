@@ -4,22 +4,12 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       metal:use-macro="main_tpl_macro"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:define-macro="view"
       i18n:domain="Progress">
-<body>
-<div metal:fill-slot="pathbar" tal:content="structure api.render_pathbar()"></div>
-<div metal:fill-slot="context_menu" tal:content="structure api.render_context_menu()"></div>
-<div metal:fill-slot="content">
-    <h1>${context.title}</h1>
-    
-    <tal:contents define="contents context.values()">
-        <ul tal:condition="contents">
-            <li tal:repeat="obj contents">
-                <a href="${resource_url(obj, request)}">${obj.title}</a>
-            </li>
-        </ul>
-        
-    </tal:contents>
-    
-</div>
+<body metal:fill-slot="main">
+<div metal:define-slot="pathbar" tal:content="structure api.render_pathbar()"></div>
+<div metal:define-slot="context_menu" tal:content="structure api.render_context_menu()"></div>
+<h1 metal:define-slot="title">${context.title}</h1>
+<metal:content define-slot="content"></metal:content>
 </body>
 </html>

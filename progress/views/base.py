@@ -20,6 +20,7 @@ class BaseView(object):
             api = self,
             form_resources = {},
             main_tpl_macro = get_renderer('templates/main.pt').implementation().macros['master'],
+            view_content_tpl_macro = get_renderer('templates/view.pt').implementation().macros['view'],            
             resource_url = resource_url,
         )
         progress_main_css.need()
