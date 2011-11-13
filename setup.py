@@ -19,6 +19,7 @@ requires = (
     'colander',
     'deform',
     'betahaus.pyracont',
+    'fanstatic',
     )
 
 setup(name='Progress',
@@ -44,6 +45,9 @@ setup(name='Progress',
       entry_points = """\
       [paste.app_factory]
       main = progress:main
+      [fanstatic.libraries]
+      progress_csslib = progress.fanstaticlib:progress_csslib
+      progress_jslib = progress.fanstaticlib:progress_jslib
       """,
       paster_plugins=['pyramid'],
       )

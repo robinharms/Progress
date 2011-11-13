@@ -4,9 +4,10 @@ from pyramid.traversal import find_root
 from pyramid.renderers import get_renderer
 from pyramid.renderers import render
 from pyramid.url import resource_url
+from pyramid.location import lineage
 
 from progress import ProgressMF as _
-from pyramid.location import lineage
+from progress.fanstaticlib import progress_main_css
 
 
 class BaseView(object):
@@ -21,6 +22,7 @@ class BaseView(object):
             main_tpl_macro = get_renderer('templates/main.pt').implementation().macros['master'],
             resource_url = resource_url,
         )
+        progress_main_css.need()
 
     @reify
     def userid(self):
